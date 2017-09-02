@@ -1,0 +1,18 @@
+version: '3'
+services:
+  web-server:
+    image: 'reflectcal/web-server:latest'
+    build: .
+    ports:
+      - '443:443'
+      - '80:80'
+      - '2222:22'
+    volumes:
+      - /etc/ssl:/etc/ssl
+      - /etc/letsencrypt:/etc/letsencrypt
+      - /var/www/html:/var/www/html
+    environment:
+      - EMAIL=mail@example.com
+      - DOMAIN=example.com
+      - APP_SERVER_URL=app-server:3000
+
