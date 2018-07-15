@@ -20,4 +20,4 @@ echo "\n"
 cat /etc/nginx/nginx.conf
 echo "Config finishes."
 service nginx reload -d
-crontab /etc/my_init.d/crontab-changed
+crontab /etc/my_init.d/crontab
