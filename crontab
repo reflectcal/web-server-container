@@ -1,2 +1,2 @@
-30 15 * * * certbot renew --deploy-hook "nginx -s reload"
+* * * * * certbot renew --dry-run --deploy-hook "nginx -s reload" && echo "Cron job started." >> ~/logs.txt
 # Mandatory empty line.
